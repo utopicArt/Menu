@@ -1,2 +1,2 @@
 # Menu
- Menú principal del juego
+ Menú principal del juego.
