@@ -17,7 +17,7 @@ public class menuPrincipal : MonoBehaviour
         
     }
 
-    public void empezarJuego()
+    public void levelSelector()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
