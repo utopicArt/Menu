@@ -1,13 +1,20 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - getSaved
     - levelController
     - menuPrincipal
+    - panelBrillo
+    - resetConfigData
+    - saveChanges
+    - tmpBrillo
     - volveraMenu
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -62,31 +69,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12734}
+      Script: {instanceID: 12744}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 13312}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 13704}
     - Class: 114
-      Script: {instanceID: 14062}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 14066}
+      Script: {instanceID: 14078}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 14420}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 14524}
     - Class: 114
-      Script: {instanceID: 14974}
+      Script: {instanceID: 14986}
     - Class: 114
-      Script: {instanceID: 15070}
+      Script: {instanceID: 15082}
     - Class: 114
-      Script: {instanceID: 15146}
+      Script: {instanceID: 15158}
     - Class: 114
-      Script: {instanceID: 15212}
+      Script: {instanceID: 15224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -127,31 +134,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 14066}
+      Script: {instanceID: 12534}
     - Class: 114
-      Script: {instanceID: 14086}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 12984}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 13704}
     - Class: 114
-      Script: {instanceID: 14802}
+      Script: {instanceID: 14078}
     - Class: 114
-      Script: {instanceID: 14974}
+      Script: {instanceID: 14098}
     - Class: 114
-      Script: {instanceID: 15146}
+      Script: {instanceID: 14288}
     - Class: 114
-      Script: {instanceID: 15192}
+      Script: {instanceID: 14420}
+    - Class: 114
+      Script: {instanceID: 14524}
+    - Class: 114
+      Script: {instanceID: 14814}
+    - Class: 114
+      Script: {instanceID: 14986}
+    - Class: 114
+      Script: {instanceID: 15158}
+    - Class: 114
+      Script: {instanceID: 15204}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -190,19 +207,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 13704}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 14008}
     - Class: 114
-      Script: {instanceID: 14066}
+      Script: {instanceID: 14078}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 14420}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 14524}
     - Class: 114
-      Script: {instanceID: 15146}
+      Script: {instanceID: 15158}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -300,6 +317,12 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: saveChanges
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -354,16 +377,34 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: cb884bb32047d6fb80e44599714df436
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: panelBrillo
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 614ecdcb244e5a17993ffd67a39e861c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: tmpBrillo
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 3b6f1ab7f8572b681ce506e3d67c1846
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: getSaved
   - hash:
       serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
@@ -400,6 +441,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: resetConfigData
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -454,6 +501,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 0d629a9f4a0773872c47e69c1201f831
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: configValues
   - hash:
       serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
