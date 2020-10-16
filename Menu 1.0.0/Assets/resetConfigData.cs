@@ -6,7 +6,7 @@ using Debug = UnityEngine.Debug;
 
 public class resetConfigData : MonoBehaviour
 {
-    public Slider slider;
+    public Slider sliderBrillo, sliderVolumen;
 
     public void resetData()
     {
@@ -25,6 +25,7 @@ public class resetConfigData : MonoBehaviour
          */
         PlayerPrefs.DeleteAll();
         Debug.Log("[!] Se reestablecieron las configuraciones");
-        slider.value = 0;
+        sliderBrillo.value = 0;
+        sliderVolumen.value = 50;
     }
 }

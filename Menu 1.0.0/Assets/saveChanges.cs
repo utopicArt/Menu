@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,15 +11,21 @@ using Debug = UnityEngine.Debug;
 
 public class saveChanges : MonoBehaviour
 {
-    public Slider slider;
+    public Slider sliderBrillo, sliderVolumen;
 
     public void comparar()
     {
         float brilloGuardado = PlayerPrefs.GetFloat("brillo", 0f);
-        if (!brilloGuardado.Equals(1 - (slider.value * 0.01f)))
+        int volumenGuardado = (int)Math.Round(PlayerPrefs.GetFloat("volumen", 0.5f));
+
+        if (!brilloGuardado.Equals(1 - (sliderBrillo.value * 0.01f)))
         {
-            Debug.Log("El valor cambió: " + brilloGuardado + " - Valor actual: " + (1 - (slider.value * 0.01f)));
             guardar("brillo");
+        }
+        if (!volumenGuardado.Equals(1 - (sliderVolumen.value * 0.01f)))
+        {
+            Debug.Log("El valor del volumen cambió");
+            guardar("volumen");
         }
     }
 
@@ -27,10 +34,17 @@ public class saveChanges : MonoBehaviour
         switch (componente)
         {
             case "brillo":
-                PlayerPrefs.SetFloat("brillo", (1 - (slider.value * 0.01f)));
+                PlayerPrefs.SetFloat("brillo", (1 - (sliderBrillo.value * 0.01f)));
                 break;
-            case "sonido":
-                PlayerPrefs.SetInt("sonido", (PlayerPrefs.GetInt("sonido", 0) == 0?1:0));
+            case "volumen":
+                PlayerPrefs.SetFloat("volumen", (sliderVolumen.value * 0.01f));
+                /*
+                 * Nivel máximo icono volumeUp.
+                 * Que empiece nivel 50 - icono nivel medio.
+                 * Nivel mínimo icono mute.
+                 * > 50 icono volumeUp cada vez más nítido conforme se mueve el slider.
+                 * < 50 icono mute cada vez más nítido conforme se mueve el slider.
+                 */
                 break;
         }
     }
