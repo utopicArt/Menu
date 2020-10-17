@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - audioController
+    - butonVolume
     - difcultadController
     - getSaved
     - levelController
@@ -75,63 +76,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 12104}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12226}
+      Script: {instanceID: 12212}
     - Class: 114
-      Script: {instanceID: 12394}
+      Script: {instanceID: 12228}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 12512}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12534}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12722}
+      Script: {instanceID: 12536}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12928}
     - Class: 114
-      Script: {instanceID: 13312}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13704}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13868}
+      Script: {instanceID: 13706}
     - Class: 114
-      Script: {instanceID: 14076}
+      Script: {instanceID: 13870}
     - Class: 114
-      Script: {instanceID: 14080}
+      Script: {instanceID: 14078}
     - Class: 114
-      Script: {instanceID: 14100}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 14170}
+      Script: {instanceID: 14102}
     - Class: 114
-      Script: {instanceID: 14292}
+      Script: {instanceID: 14172}
     - Class: 114
-      Script: {instanceID: 14424}
+      Script: {instanceID: 14294}
     - Class: 114
-      Script: {instanceID: 14528}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 14818}
+      Script: {instanceID: 14530}
     - Class: 114
-      Script: {instanceID: 14990}
+      Script: {instanceID: 14820}
     - Class: 114
-      Script: {instanceID: 15044}
+      Script: {instanceID: 14992}
     - Class: 114
-      Script: {instanceID: 15088}
+      Script: {instanceID: 15046}
     - Class: 114
-      Script: {instanceID: 15164}
+      Script: {instanceID: 15090}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15166}
     - Class: 114
-      Script: {instanceID: 15226}
+      Script: {instanceID: 15212}
     - Class: 114
-      Script: {instanceID: 15232}
+      Script: {instanceID: 15228}
+    - Class: 114
+      Script: {instanceID: 15234}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,21 +171,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12212}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 12928}
     - Class: 114
-      Script: {instanceID: 13704}
+      Script: {instanceID: 13706}
     - Class: 114
-      Script: {instanceID: 14010}
+      Script: {instanceID: 14012}
     - Class: 114
-      Script: {instanceID: 14080}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 14424}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 14528}
+      Script: {instanceID: 14530}
     - Class: 114
-      Script: {instanceID: 15164}
+      Script: {instanceID: 15166}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,6 +247,12 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 201c33970d85b1ed632e2952de739c09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: butonVolume
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -280,7 +289,7 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: 54fd43b3f206943715504b29a0c57c64
+      Hash: 27c9634a3ef5a0cda4320ae6c5a3b6ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: saveChanges

@@ -12,6 +12,29 @@ using Debug = UnityEngine.Debug;
 public class saveChanges : MonoBehaviour
 {
     public Slider sliderBrillo, sliderVolumen;
+    public GameObject message, panelPrincipal, panelConfig;
+
+    public void Nuevoscambios()
+    {
+        float brilloGuardado = PlayerPrefs.GetFloat("brillo", 0f);
+        float volumenGuardado = (100f * PlayerPrefs.GetFloat("volumen", 0.5f));
+        bool existenCambios = false;
+
+        brilloGuardado = (brilloGuardado != 0 ? (int)Math.Round((PlayerPrefs.GetFloat("brillo", 0f) - 1) / -0.01) : 0);
+
+        if (!sliderBrillo.value.Equals(brilloGuardado))
+        {
+            existenCambios = true;
+        }
+        if (!sliderVolumen.value.Equals(volumenGuardado))
+        {
+            existenCambios = true;
+        }
+
+        message.SetActive((existenCambios?true:false));
+        panelPrincipal.SetActive((existenCambios?false:true));
+        panelConfig.SetActive((existenCambios?true:false));
+    }
 
     public void comparar()
     {
@@ -24,7 +47,6 @@ public class saveChanges : MonoBehaviour
         }
         if (!volumenGuardado.Equals(1 - (sliderVolumen.value * 0.01f)))
         {
-            Debug.Log("El valor del volumen cambió");
             guardar("volumen");
         }
     }

@@ -22,6 +22,11 @@ public class getSaved : MonoBehaviour
     void Start()
     {
         nivelBrillo = brilloPanel.GetComponent<Image>();
+        obtenerConfiguración();
+    }
+
+    public void obtenerConfiguración()
+    {
         brillo = PlayerPrefs.GetFloat("brillo", 0f);
         volumen = (100f * PlayerPrefs.GetFloat("volumen", 0.5f));
 
